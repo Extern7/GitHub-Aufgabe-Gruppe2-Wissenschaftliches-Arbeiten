@@ -8,6 +8,7 @@ dmetrische <- function(x){
   par(mfrow=c(1,2))
   hist(x, freq = FALSE)
   boxplot(x)
+  summary(x)
 }
 
 
@@ -23,15 +24,19 @@ dkat <- function(x){
 
 
 ## Funktion c
-dbiv <- function(x,y){
-  boxplot(x~y)
+dkat_biv <- function(x,y){
+  tab <- table(x,y)
+  mosaicplot(tab)
 }
 
 
 
 
 ## Funktion d
-
+dbiv <- function(x,y){
+  boxplot(x~y)
+  
+}
 
 
 
