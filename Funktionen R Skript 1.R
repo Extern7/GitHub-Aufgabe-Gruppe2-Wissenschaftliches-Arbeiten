@@ -34,8 +34,7 @@ dkat_biv <- function(x,y){
 
 ## Funktion d
 dbiv <- function(x,y){
-  boxplot(x~y)
-  
+  boxplot(x~y) 
 }
 
 
