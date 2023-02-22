@@ -1,0 +1,3 @@
+
+
+dkat(Data$Alter)
