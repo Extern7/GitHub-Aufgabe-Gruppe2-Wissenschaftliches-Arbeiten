@@ -41,7 +41,12 @@ dbiv <- function(x,y){
 
 
 ## Funktion e
-
+dquan <- function(x){
+  niedrig <- quantile(x, probs = 1/3)
+  mittel <- quantile(x, probs = 2/3)
+  hoch <- quantile(x, probs = 1)
+  barplot(c(niedrig, mittel, hoch), names = c("niedrig", "mittel", "hoch"))
+}
 
 
 
