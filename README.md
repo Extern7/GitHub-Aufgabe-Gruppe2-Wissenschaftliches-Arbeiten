@@ -4,6 +4,6 @@ Gruppe 2:
 Patrick Badura (Pata95),
 Simon Kutzner (Extern7),
 Stefan Merfelskemper (ADD USERNAME),
-Melvin Tenbrock (ADD USERNAME)
+Melvin Tenbrock (Me37127)
 
 Repository owner: simon.kutzner@tu-dortmund.de
