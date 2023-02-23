@@ -48,6 +48,13 @@ dquan <- function(x){
   barplot(c(niedrig, mittel, hoch), names = c("niedrig", "mittel", "hoch"))
 }
 
+dquan1 <- function(x){
+  niedrig <- quantile(x, probs = 1/3)                    
+  mittel <- quantile(x, probs = 2/3)
+  hoch <- quantile(x, probs = 1)
+  table(cut(x, breaks = c(0, niedrig, mittel, hoch), 
+            labels = c("niedrig", "mittel", "hoch")))
+}
 
 
 
