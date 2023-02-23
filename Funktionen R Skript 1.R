@@ -56,7 +56,7 @@ dquan1 <- function(x){
             labels = c("niedrig", "mittel", "hoch")))
 }
 
-
+# In dquan und dquan1 sind Intervalle bei den Merkmalen Interesse.an.Mathe/Programmieren asymmetrisch: niedrig = (0, 3], mittel = (3, 5], hoch = (5, 7]
 
 ## Funktion f
 
