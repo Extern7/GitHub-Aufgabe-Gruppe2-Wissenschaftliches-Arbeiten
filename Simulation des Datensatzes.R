@@ -137,11 +137,11 @@ for(i in 1:100){
 
 
 write.csv(data2,row.names = FALSE)
-write.csv(data,row.names = FALSE)
-# P: Wie die andere Gruppe schon angemerkt hat, kann die erste Spalte des
-#  dataframes geloescht werden.
 
-#Ich werde dann nur die data2 als csv Datei erneut hochladen. Sollte reichen.
+# P: Wie die andere Gruppe schon angemerkt hat, kann die erste Spalte des
+#  dataframes geloescht werden, da diese gleich der ID Spalte ist.
+
+# data2 ist der Datensatz mit Abhaengigkeiten, dieser wird in main hochgeladen.
 
 
 
