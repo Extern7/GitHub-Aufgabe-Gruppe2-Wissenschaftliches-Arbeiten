@@ -54,8 +54,6 @@ dquan <- function(x){
 }
 
 
-# In dquan sind Intervalle bei den Merkmalen Interesse.an.Mathe/Programmieren asymmetrisch: niedrig = (0, 3], mittel = (3, 5], hoch = (5, 7]
-
 ## Funktion f
 
 
