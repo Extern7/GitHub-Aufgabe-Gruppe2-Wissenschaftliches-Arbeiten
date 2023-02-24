@@ -9,6 +9,7 @@ dmetrische <- function(x){
   hist(x, freq = FALSE)
   boxplot(x)
   summary(x)
+  par(mfrow=c(1,1))
 }
 
 
@@ -17,6 +18,7 @@ dmetrische <- function(x){
 ## Funktion b
 dkat <- function(x){
   barplot(table(x))
+  if(is.numeric(x)){median(x)}
 }
 
 
@@ -26,7 +28,7 @@ dkat <- function(x){
 ## Funktion c
 dkat_biv <- function(x,y){
   tab <- table(x,y)
-  mosaicplot(tab)
+  mosaicplot(tab, main = "Mosaikplot")
 }
 
 
@@ -34,7 +36,8 @@ dkat_biv <- function(x,y){
 
 ## Funktion d
 dbiv <- function(x,y){
-  boxplot(x~y) 
+  boxplot(x~y)
+  spineplot(x, as.factor(y))
 }
 
 
@@ -45,18 +48,13 @@ dquan <- function(x){
   niedrig <- quantile(x, probs = 1/3)
   mittel <- quantile(x, probs = 2/3)
   hoch <- quantile(x, probs = 1)
-  barplot(c(niedrig, mittel, hoch), names = c("niedrig", "mittel", "hoch"))
-}
-
-dquan1 <- function(x){
-  niedrig <- quantile(x, probs = 1/3)                    
-  mittel <- quantile(x, probs = 2/3)
-  hoch <- quantile(x, probs = 1)
+  barplot(c(niedrig, mittel, hoch), names = c("niedrig", "mittel", "hoch")),
   table(cut(x, breaks = c(0, niedrig, mittel, hoch), 
             labels = c("niedrig", "mittel", "hoch")))
 }
 
-# In dquan und dquan1 sind Intervalle bei den Merkmalen Interesse.an.Mathe/Programmieren asymmetrisch: niedrig = (0, 3], mittel = (3, 5], hoch = (5, 7]
+
+# In dquan sind Intervalle bei den Merkmalen Interesse.an.Mathe/Programmieren asymmetrisch: niedrig = (0, 3], mittel = (3, 5], hoch = (5, 7]
 
 ## Funktion f
 
