@@ -3,7 +3,7 @@
 ## Aufgabe 1 - Datensimulation
 
 
-# Ohne Abhängigkeiten:
+# Ohne Abaengigkeiten:
 
 ## Dataframe erstellen
 
@@ -69,28 +69,7 @@ data
 # P: funktioniert bei mir. 5 Merkmale + ID-Spalte und 100 reps.
 
 
-# Idee für zweiten Datensatz:
-
-# P: Eine reine Gleichverteilung ist ja ziemlich la. Lass uns also einen zweiten
-# Datensatz data2 erstellen. Die andere Gruppe kann ja beide Datensaetze
-# analysieren, oder sich einen aussuchen.
-
-# Abhaengige Wahrscheinlichkeit und Verteilung der Interessen
-
-# Joa hier muessen wir uns etwas sinnvolles ausssuchen. Erstmal ein spontanes 
-# Ranking der Interessen der Faecher von mir ohne Wahrscheinlichkeiten.
-
-#     |Mathematik | Informatik | Data Science | Statistik |
-#IaM  |    1      |     4      |      3       |     2     | 
-#IaP  |    4      |     1      |      2       |     3     |
-#MLK  |    1      |     4      |      3       |     2     |
-
-# Nun Mathe LK ist hier nur vom Interesse an Mathe abhaengig, aber dass soll
-# ja erstmal nur ne Idee sein.
-
-
-
-# S: Ein zweiter Datensatz mit Abhängigkeiten:
+# S: Ein zweiter Datensatz mit Abhaengigkeiten:
 
 data2 <- data.frame("ID" = seq(1,100,1),
                     "Alter" = rep(0,100),
@@ -129,8 +108,8 @@ if(data2$Interesse.an.Mathematik[i] >= 6)
   {data2$Mathe.LK[i] <- sample(c("Ja","Nein"), size = 1, replace = TRUE,prob = c(0.8,0.2))}
 }
 
-# S: Die Idee wird folgendermaßen umgesetzt. Ist das Interesse an Mathematik höher, so wird eher
-# der Mathe-LK gewählt.
+# S: Die Idee wird folgendermassen umgesetzt. Ist das Interesse an Mathematik
+# hoeher, so wird eher der Mathe-LK gewaehlt.
 
 
 
@@ -151,10 +130,21 @@ for(i in 1:100){
                                     prob = c(0.35, 0.35, 0.05, 0.25))}
 }
 
-# S: Wir unterscheiden, wie das Interesse an Mathematik im Vergleich zum Interesse an Programmieren
-# ist. Dabei ist Data Science, der "weniger mathematische" der Statistik Studiengänge. So ergeben sich 
-# die Korrelation zwischen Studiengang und Interessen.
+# S: Wir unterscheiden, wie das Interesse an Mathematik im Vergleich zum Interesse
+# an Programmieren ist. Dabei ist Data Science, der "weniger mathematische" der
+# Statistik Studiengaenge. So ergeben sich die Korrelation zwischen Studiengang und Interessen.
 
 
 
-write.csv(data2)
+write.csv(data2,row.names = FALSE)
+write.csv(data,row.names = FALSE)
+# P: Wie die andere Gruppe schon angemerkt hat, kann die erste Spalte des
+#  dataframes geloescht werden.
+
+#Ich werde dann nur die data2 als csv Datei erneut hochladen. Sollte reichen.
+
+
+
+
+
+
