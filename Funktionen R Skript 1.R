@@ -18,7 +18,9 @@ dmetrische <- function(x){
 ## Funktion b
 dkat <- function(x){
   barplot(table(x))
-  if(is.numeric(x)){median(x)}
+  if(is.numeric(x)){cat("Median:", median(x), " ")}
+  modus <- names(table(x)[which(table(x) == max(table(x)))])
+  cat("Modus:", modus)
 }
 
 
@@ -28,7 +30,10 @@ dkat <- function(x){
 ## Funktion c
 dkat_biv <- function(x,y){
   tab <- table(x,y)
+  print(tab)
   mosaicplot(tab, main = "Mosaikplot")
+  if(is.numeric(x) & is.numeric(y)){
+  cor.test(x,y, method = "spearman")}
 }
 
 
