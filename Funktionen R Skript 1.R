@@ -67,7 +67,19 @@ dquan <- function(x){
 }
 
 ## Funktion f
-
+vis <- function(x, y, z){
+  layout.m <- matrix(c(1, 2, 3, 4), nrow = 2, byrow = TRUE)
+  layout(mat = layout.m, 
+       heights = c(1, 1),
+       widths = c(1, 1))
+  boxplot(x~y, col = "steelblue")
+  boxplot(z~y, col = "steelblue")
+  barplot(table(x[which(data$Mathe.LK == "Ja")]), 
+        col = "lightblue")
+  barplot(table(y[which(data$Mathe.LK == "Ja")]),
+        col = "lightblue")
+  layout(mat = 1)
+}
 
 
 
