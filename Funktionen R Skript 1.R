@@ -41,8 +41,14 @@ dkat_biv <- function(x,y){
 
 ## Funktion d
 dbiv <- function(x,y){
+  if(!is.numeric(x)){
+    stop("x muss Merkmal mit metrischen Auspraegungen sein
+         (Datentyp numeric)")
+  }
+  par(mfrow=c(1,2))
   boxplot(x~y)
   spineplot(x, as.factor(y))
+  par(mfrow=c(1,1))
 }
 
 
@@ -70,24 +76,23 @@ dquan <- function(x){
 ## Weitere Funktionen
 
 
-# Idee: Barplot der relative Häufigkeiten von Ausprägungen kategorieller Variablen in 
-# Abhängigkeit von den Interessen darstellt
+# Weiter entwicktelte Funktion dkat_bar:
 
-# beispielhaft:
+dkat_bar <- function(kat1, kat2){
+  lkat1 <- length(table(kat1))
+  lkat2 <- length(table(kat2))
+  nkat1 <- names(table(kat1))
+  nkat2 <- names(table(kat2))
+  Gruppen <- function(x){
+    sapply(nkat2, function(y) sum(kat1[which(kat2 == y)] == nkat1[x]))/
+      sum(kat1 == nkat1[x])
+  }
+  barplot(matrix(c(sapply(1:lkat1, Gruppen)), nrow = lkat2),
+    beside = TRUE,
+    main = "Barplot", ylab = "relative Häufigkeiten", names.arg = nkat1[1:lkat1],
+    legend.text = nkat2)
+}
 
-data <- read.csv("datensatz.csv")
-
-barplot(matrix(c(
-  sapply(1:7, function(x) sum(data$Studienfach[which(data$Interesse.an.Mathematik == x)] == "Data Science"))/
-    sum(data$Studienfach == "Data Science"),
-  sapply(1:7, function(x) sum(data$Studienfach[which(data$Interesse.an.Mathematik == x)] == "Informatik"))/
-    sum(data$Studienfach == "Informatik"),
-  sapply(1:7, function(x) sum(data$Studienfach[which(data$Interesse.an.Mathematik == x)] == "Mathe"))/
-    sum(data$Studienfach == "Mathe"),
-  sapply(1:7, function(x) sum(data$Studienfach[which(data$Interesse.an.Mathematik == x)] == "Statistik"))/
-    sum(data$Studienfach == "Statistik")), nrow = length(table(data$Interesse.an.Mathematik))),
-  beside = TRUE,
-  main = "Barplot", ylab = "relative Häufigkeiten", names.arg = c("Data Science", "Informatik",
-                                                                  "Mathe", "Statistik"))
-
-# Nächster Schritt: Diesen Barplot als Funktion verallgemeinern
+# Die Funktion erstellt einen Barplot für kategorielle Merkmale mit Gruppen von "juxtaposed"-Bars (beside = TRUE). 
+# So kann zum Beispiel für kat1 = Studienfach, kat2 = Interesse.an.Mathematik folgendes visualiert werden:
+# Die realtiven Haeufigkeiten von den Interesseleveln in Abhängigkeit vom Studienfach.
