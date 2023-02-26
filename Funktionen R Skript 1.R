@@ -81,7 +81,7 @@ kat_vis <- function(x, y, z){
   layout(mat = 1)
 }
 # Gedanke dahinter: kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
-# Erstellt zwei Boxplots und zwei Balkendiagramme, die Zusammenhänge zwischen den Merkmalen untersuchen sollen.
+# Erstellt 2x4 Boxplots und zwei Balkendiagramme, die Zusammenhänge zwischen den Merkmalen untersuchen sollen.
 
 
 
