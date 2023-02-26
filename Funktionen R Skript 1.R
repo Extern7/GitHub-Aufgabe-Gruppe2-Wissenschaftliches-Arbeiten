@@ -75,9 +75,9 @@ kat_vis <- function(x, y, z){
   boxplot(x~y, col = "steelblue")
   boxplot(z~y, col = "steelblue")
   barplot(table(x[which(data$Mathe.LK == "Ja")]), 
-        col = "lightblue")
+        col = "lightblue",  main = "Barplot von x unter der Bedingung: Mathe-LK == Ja")
   barplot(table(y[which(data$Mathe.LK == "Ja")]),
-        col = "lightblue")
+        col = "lightblue",  main = "Barplot von y unter der Bedingung: Mathe-LK == Ja")
   layout(mat = 1)
 }
 # Gedanke dahinter: kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
