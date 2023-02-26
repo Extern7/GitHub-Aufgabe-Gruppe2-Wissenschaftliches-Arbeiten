@@ -59,6 +59,9 @@ dquan <- function(x){
   niedrig <- quantile(x, probs = 1/3)
   mittel <- quantile(x, probs = 2/3)
   hoch <- quantile(x, probs = 1)
+  cat("niedrig Quantil:", niedrig, "\n")
+  cat("mittel Quantil:", mittel, "\n") 
+  cat("hoch Quantil:", hoch, "\n")
   barplot(table(cut(x, breaks = c(0, niedrig, mittel, hoch), 
                     labels = c("niedrig", "mittel", "hoch"))))
   table(cut(x, breaks = c(0, niedrig, mittel, hoch), 
