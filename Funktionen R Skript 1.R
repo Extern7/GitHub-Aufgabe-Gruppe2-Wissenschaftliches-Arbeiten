@@ -12,6 +12,8 @@ dmetrische <- function(x){
   par(mfrow=c(1,1))
 }
 
+# Die metrische Variable wird visuell durch Histogramm und Boxplot dargestellt. MIt summary() werden
+# alle wichtigen Lagemaße berechnet.
 
 
 
@@ -23,7 +25,8 @@ dkat <- function(x){
   cat("Modus:", modus)
 }
 
-
+# Visualisierung der kategoriellen Variable über Barplot. Der Modus als Kennzahl wird auch berechnet.
+# Ist die kategorielle Variable ordinal, so wird auch der Median berechnet.
 
 
 
@@ -36,6 +39,8 @@ dkat_biv <- function(x,y){
   cor.test(x,y, method = "spearman")}
 }
 
+# Gibt eine Zusammenhangsgröße für zwei kategorielle Variablen aus, wenn diese ordinal sind. Für alle 
+# kategoriellen Variablen wird zudem eine Tablle und eine Visualisierung der Daten als Mosaikplot ausgegeben.
 
 
 
@@ -48,9 +53,13 @@ dbiv <- function(x,y){
   par(mfrow=c(1,2))
   boxplot(x~y)
   spineplot(x, as.factor(y))
+  cat("absolute correlation:", abs(cor(x, dichkod(y))))
   par(mfrow=c(1,1))
 }
 
+# Stellt Zusammenhang einer metrischen und dichotomen Variable dar.
+# Zudem wird die absolute Korrelation zwischen beiden Variablen berechnet, wobei die dichotome Variable mit einer 
+# Funktion aus Funktion-Skript 2 zu 0 und 1 kodiert wird.
 
 
 
@@ -68,6 +77,11 @@ dquan <- function(x){
             labels = c("niedrig", "mittel", "hoch")))
   
 }
+
+# Sortiert für metrische und ordinale Daten die Ausprägungen in 3 Gruppen ein. Gibt zudem eine Tabelle und ein Barplot über die
+# Haeufigkeiten von Auspraegungen in diesen Gruppen aus.
+
+
 
 ## Funktion f
 kat_vis <- function(x, y, z){                   
@@ -110,4 +124,4 @@ dkat_bar <- function(kat1, kat2){
 
 # Die Funktion erstellt einen Barplot für kategorielle Merkmale mit Gruppen von "juxtaposed"-Bars (beside = TRUE). 
 # So kann zum Beispiel für kat1 = Studienfach, kat2 = Interesse.an.Mathematik folgendes visualiert werden:
-# Die realtiven Haeufigkeiten von den Interesseleveln in Abhängigkeit vom Studienfach.
+# Die relativen Haeufigkeiten von den Interesseleveln in Abhängigkeit vom Studienfach.
