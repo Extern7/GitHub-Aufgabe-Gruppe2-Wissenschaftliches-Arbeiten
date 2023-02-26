@@ -67,7 +67,7 @@ dquan <- function(x){
 }
 
 ## Funktion f
-vis <- function(x, y, z){
+kat_vis <- function(x, y, z){                   
   layout.m <- matrix(c(1, 2, 3, 4), nrow = 2, byrow = TRUE)
   layout(mat = layout.m, 
        heights = c(1, 1),
@@ -80,8 +80,8 @@ vis <- function(x, y, z){
         col = "lightblue")
   layout(mat = 1)
 }
-
-
+# Gedanke dahinter: kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
+# Erstellt zwei Boxplots und zwei Balkendiagramme, die Zusammenhänge zwischen den Merkmalen untersuchen sollen.
 
 
 
