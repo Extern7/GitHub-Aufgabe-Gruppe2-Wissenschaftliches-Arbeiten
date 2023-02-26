@@ -1,0 +1,1 @@
+#Funktionen R Skript 2 für interne Funkitionen
