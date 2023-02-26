@@ -119,7 +119,8 @@ dkat_bar <- function(kat1, kat2){
   barplot(matrix(c(sapply(1:lkat1, Gruppen)), nrow = lkat2),
     beside = TRUE,
     main = "Barplot", ylab = "relative Häufigkeiten", names.arg = nkat1[1:lkat1],
-    legend.text = nkat2)
+    col = c(1,8,4,5,3,7,10))
+  legend("topright", legend = 1:7, col = c(1,8,4,5,3,7,10), cex = 0.8, pch = 15)
 }
 
 # Die Funktion erstellt einen Barplot für kategorielle Merkmale mit Gruppen von "juxtaposed"-Bars (beside = TRUE). 
