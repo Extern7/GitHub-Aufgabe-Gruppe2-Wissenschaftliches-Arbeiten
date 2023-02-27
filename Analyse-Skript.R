@@ -54,16 +54,49 @@ dquan(data$Interesse.an.Mathematik)
 #Nur ca. 1/3 der Studierenden haben ein hohes Interesse an Mathematik, obwohl es sich grundsätzlich um Studiengänge mit einem
 #hohen Mathematikanteil handelt.
 
+##Interesse an Mathematik ~ Mathe-LK ~ Alter
+
+kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
+#Im ersten Boxplot lässt sich erkennen, dass Personen mit Mathe-LK auch ein deutlich
+#höheres Interesse an Mathematik haben.
+#Das wird auch durch die genauen Lagemaßen bestätigt:
+summary(data$Interesse.an.Mathematik [which(data$Mathe.LK == "Ja")])
+summary(data$Interesse.an.Mathematik [which(data$Mathe.LK == "Nein")])
+
+
+##Studienfach ~ Mathe-LK
+
+kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
+#Kein Zusammenhang zwischen Studienfach ~ Mathe LK
+
+
+##Studienfach ~ Interesse an Mathematik
+
+dkat_bar(data$Studienfach, data$Interesse.an.Mathematik)
+
+
+##Studienfach ~ Interesse an Programmieren
+
+dkat_bar(data$Studienfach, data$Interesse.an.Programmieren)
+
+
 ##Interesse an Programmieren
 
 dquan(data$Interesse.an.Programmieren)
-#
-#
+
+
+#Verteilung der Interessen untersuchen
+par(mfrow = c(1,2))
+barplot(table(data$Interesse.an.Mathematik), main = "Interesse an Mathematik")
+barplot(table(data$Interesse.an.Programmieren), main ="Interesse an Programmieren")
+#Es ist zunächst keine Verteilung direkt erkennbar. Jedoch aufgrund der nur 100 Daten,
+#könnte es sich um eine Gleichverteilung handeln. Dabei müsste jede Interessenangabe
+#von 1 bis 7 ca. 14 mal auftreten. Wenn man sich nun die Balkendiagramme anguckt, 
+#passt die Annahme einer gleichverteilung. Die Werte ,,schwanken" um die 14.
 
 ##Weitere Zusammenhaenge
 
 kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
 #Kein Zusammenhang zwischen Studienfach ~ Mathe LK
-#Es existiert Zusammenhang zwischen Interesse an Mathe ~ Mathe LK
-#
+
 
