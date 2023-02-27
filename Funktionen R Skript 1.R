@@ -32,6 +32,22 @@ dkat <- function(x){
 
 
 ## Funktion c
+int.biv <- function(x, y){
+  ds.math.int <- sum(x > y & data$Studienfach == "Data Science")/
+    sum(data$Studienfach == "Data Science")
+  st.math.int <- sum(x > y & data$Studienfach == "Statistik")/
+    sum(data$Studienfach == "Statistik")
+  inf.math.int <- sum(x > y & data$Studienfach == "Informatik")/
+    sum(data$Studienfach == "Informatik")
+  math.math.int <- sum(x > y & data$Studienfach == "Mathe")/
+    sum(data$Studienfach == "Mathe")
+  print(c("Data Science" = ds.math.int, "Statistik" = st.math.int,
+          "Informatik" = inf.math.int, "Mathe" = math.math.int))
+}
+
+# Gibt table mit relativen Häufigkeiten aus. Soll Interesse an Mathe/Prog in Abhaengigkeit vom Studienfach zeigen.
+# Beispiel: int.biv(data$Interesse.an.Mathematik, 5)
+
 dkat_biv <- function(x,y){
   tab <- table(x,y)
   print(tab)
