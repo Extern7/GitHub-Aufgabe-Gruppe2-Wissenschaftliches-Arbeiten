@@ -23,6 +23,7 @@ dkat <- function(x){
   if(is.numeric(x)){cat("Median:", median(x), " ")}
   modus <- names(table(x)[which(table(x) == max(table(x)))])
   cat("Modus:", modus)
+  table(x)
 }
 
 # Visualisierung der kategoriellen Variable über Barplot. Der Modus als Kennzahl wird auch berechnet.
