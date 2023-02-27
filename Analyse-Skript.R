@@ -1,3 +1,8 @@
+### Analyse des Datensatz (ohne rownames)
+library(readr)
+file <- "https://github.com/Extern7/GitHub-Aufgabe-Gruppe2-Wissenschaftliches-Arbeiten/blob/main/original_datensatz_ohne_rownames.csv"
+data <- read_csv(url(file))
+
 ##Analyse des Alters 
 
 dmetrische(data$Alter)
