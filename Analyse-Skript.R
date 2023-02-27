@@ -1,8 +1,5 @@
 ### Analyse des Datensatz (ohne rownames)
-install.packages("readr")
-library(readr)
-file <- "https://github.com/Extern7/GitHub-Aufgabe-Gruppe2-Wissenschaftliches-Arbeiten/blob/main/original_datensatz_ohne_rownames.csv"
-data <- read_csv(url(file))
+data <- read.csv("original_datensatz_ohne_rownames.csv")
 
 ##Analyse des Alters 
 
