@@ -12,8 +12,8 @@ dmetrische <- function(x){
   par(mfrow=c(1,1))
 }
 
-# Die metrische Variable wird visuell durch Histogramm und Boxplot dargestellt. MIt summary() werden
-# alle wichtigen Lagemaße berechnet.
+# Die metrische Variable wird visuell durch Histogramm und Boxplot dargestellt. Mit summary() werden
+# alle wichtigen Lagemasse berechnet.
 
 
 
@@ -56,7 +56,7 @@ dkat_biv <- function(x,y){
   cor.test(x,y, method = "spearman")}
 }
 
-# Gibt eine Zusammenhangsgröße für zwei kategorielle Variablen aus, wenn diese ordinal sind. Für alle 
+# Gibt eine Zusammenhangsgroesse fuer zwei kategorielle Variablen aus, wenn diese ordinal sind. Fuer alle 
 # kategoriellen Variablen wird zudem eine Tablle und eine Visualisierung der Daten als Mosaikplot ausgegeben.
 
 
@@ -95,8 +95,9 @@ dquan <- function(x){
   
 }
 
-# Sortiert für metrische und ordinale Daten die Ausprägungen in 3 Gruppen ein. Gibt zudem eine Tabelle und ein Barplot über die
-# Haeufigkeiten von Auspraegungen in diesen Gruppen aus.
+# Sortiert fuer metrische und ordinale Daten die Auspraegungen in 3 Gruppen ein.
+# Gibt zudem eine Tabelle und einen Barplot ueber die Haeufigkeiten von
+# Auspraegungen in diesen Gruppen aus.
 
 
 
@@ -115,7 +116,7 @@ kat_vis <- function(x, y, z){
   layout(mat = 1)
 }
 # Gedanke dahinter: kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
-# Erstellt 2x4 Boxplots und zwei Balkendiagramme, die Zusammenhänge zwischen den Merkmalen untersuchen sollen.
+# Erstellt 2x4 Boxplots und zwei Balkendiagramme, die Zusammenhaenge zwischen den Merkmalen untersuchen sollen.
 
 
 
@@ -135,11 +136,11 @@ dkat_bar <- function(kat1, kat2){
   }
   barplot(matrix(c(sapply(1:lkat1, Gruppen)), nrow = lkat2),
     beside = TRUE,
-    main = "Barplot", ylab = "relative Häufigkeiten", names.arg = nkat1[1:lkat1],
+    main = "Barplot", ylab = "relative Haeufigkeiten", names.arg = nkat1[1:lkat1],
     col = c(1,8,4,5,3,7,10))
   legend("topright", legend = 1:7, col = c(1,8,4,5,3,7,10), cex = 0.8, pch = 15)
 }
 
-# Die Funktion erstellt einen Barplot für kategorielle Merkmale mit Gruppen von "juxtaposed"-Bars (beside = TRUE). 
-# So kann zum Beispiel für kat1 = Studienfach, kat2 = Interesse.an.Mathematik folgendes visualiert werden:
-# Die relativen Haeufigkeiten von den Interesseleveln in Abhängigkeit vom Studienfach.
+# Die Funktion erstellt einen Barplot fuer kategorielle Merkmale mit Gruppen von "juxtaposed"-Bars (beside = TRUE). 
+# So kann zum Beispiel fuer kat1 = Studienfach, kat2 = Interesse.an.Mathematik folgendes visualiert werden:
+# Die relativen Haeufigkeiten von den Interesseleveln in Abhaengigkeit vom Studienfach.
