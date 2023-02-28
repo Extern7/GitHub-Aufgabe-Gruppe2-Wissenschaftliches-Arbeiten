@@ -6,14 +6,15 @@
 
 -Studienfach: Anteil von Data Science & Statistik mit jeweils ca. 37%, Informatik ca. 21% und Mathematik mit ca. 5%
 
+-Nur ca. 1/3 der Studierenden haben ein hohes Interesse an Mathematik
 -Bei den Mathematik Studierenden ist das Interesse an Mathematik unrealistisch (kein Zusammenhang), das liegt jedoch wahrscheinlich an den wenigen Daten
  der Mathematikstudierenden
 -Es gibt wenige Informatiker, die ein hohes Interesse (>5) an Mathematik haben
 -Viele Statistik Studierende haben ein niedriges Interesse (<2) an Mathematik
 
+-Nur ca. 1/5 der Studierenden haben ein hohes Interesse an Programmieren
 -Ein Großteil der Informatik Studierenden hat ein Interesse an Programmieren (>3) bzw. es gibt wenige, die ein niedriges Interesse haben
 -Es gibt viele Statistik Studierende die ein großes Interesse (>5) an Programmieren haben
--Nur ca. 1/3 haben ein hohes Interesse an Mathematik und ca. 1/5 ein hohes Interesse an Programmieren
 
 -Es gibt grundsätzlich mehr Studierende mit Mathe-LK (63) als ohne Mathe-LK (37)
 -Studierende mit Mathe-LK haben ein höheres Interesse an Mathematik (Median = 5), als Studierende ohne Mathe-LK (Median = 2)
