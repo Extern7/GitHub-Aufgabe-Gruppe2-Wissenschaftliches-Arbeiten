@@ -32,7 +32,7 @@
  Legende: prob("Statistik", "Data Science", "Mathe","Informatik"), Ip = Interesse am Programmieren & Im = Interesse an Mathe
 
  Falls Im(0,4] und Ip(4,7] --> prob(15%,20%,5%,60%)
- Falls Im(5,7] und Ip(4,7] --> prob(50%,20%,25%,5%)
+ Falls Im(4,7] und Ip(0,4] --> prob(50%,20%,25%,5%)
                  Ansonsten --> prob(35%,35%,5%,25%)
 
 -Interessen: Die Interessen an Mathematik und Programmieren sind beide gleichverteilt mit 1/7.
@@ -43,3 +43,14 @@
 
 
 ## Dialog:
+
+# Simon:
+Als Verteilungsannahme für das Alter die Normalverteilung zu nehmen war eine gute Entscheidung. So konntet ihr direkt aus den Daten die Verteilungsparameter
+schätzen. Die realtiven Häufigkeiten der einzelnen Studienfächer ziemlich nahe an den tatsächlichen Wahrscheinlichkeiten.
+Auch die Interessen als Gleichverteilungen sind korrekt. Auf alle Verteilungen konnte durch die Analyse also sehr gut geschlossen werden.
+
+Die Analyse von Beobachtungen mit "Mathe" als Studienfach sind anscheinend schwer gefallen, was auch Sinn macht. Wie ihr selbst begründet, können aufgrund der 
+wenigen Daten keine guten Schlüsse gezogen werden. In den häufigsten Fällen wird nämlich mit einer 5% Wahrscheinlichkeit für Mathe gezogen. Bei 100 Beobachtungn
+lässt sich für so kleine Teilstichproben keine gute Aussage treffen.
+
+Den Zusammenhang zwischen Mathe-LK und Interesse an Mathematik habt ihr sehr gut erkannt.
