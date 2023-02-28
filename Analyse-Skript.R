@@ -96,6 +96,8 @@ kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Progra
 kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
 dkat_bar(data$Studienfach, data$Interesse.an.Mathematik)
 #Wenig Informatik Studierende haben ein hohes Interesse an Mathematik. (Hohes Interesse: >5)
+#Es gibt zu wenig Mathematikstudierende in unserem Datensatz, um zwischen dem Studienfach Mathe und der Interesse an Mathematik
+#einen Zusammenhang herzustellen.
 
 
 ##Studienfach ~ Interesse an Programmieren
@@ -103,7 +105,7 @@ dkat_bar(data$Studienfach, data$Interesse.an.Mathematik)
 kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
 dkat_bar(data$Studienfach, data$Interesse.an.Mathematik)
 #Wenig Informatik Studierende haben ein niedriges Interesse an Programmieren. (Niedriges Interesse: <4)
-
+#Statistikstudierende haben ein großes Interesse an Programmieren (>5)
 
 #Verteilung der Interessen untersuchen
 par(mfrow = c(1,2))
@@ -113,10 +115,3 @@ barplot(table(data$Interesse.an.Programmieren), main ="Interesse an Programmiere
 #könnte es sich um eine Gleichverteilung handeln. Dabei müsste jede Interessenangabe
 #von 1 bis 7 ca. 14 mal auftreten. Wenn man sich nun die Balkendiagramme anguckt, 
 #passt die Annahme einer gleichverteilung. Die Werte ,,schwanken" um die 14.
-
-##Weitere Zusammenhaenge
-
-kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
-#Kein Zusammenhang zwischen Studienfach ~ Mathe LK
-
-
