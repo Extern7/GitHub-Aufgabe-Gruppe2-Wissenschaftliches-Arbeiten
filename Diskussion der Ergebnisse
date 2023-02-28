@@ -78,3 +78,15 @@ Funktionen schreiben. (bzw fehlten euch irgendwelche Funktionen um die Analyse n
 Was auch interessant ist: Ihr habt geschrieben, dass viele Statistik Studenten ein hohes Interesse an Programmieren haben. Dabei haben wir das gar nicht eingeplant. Das zeigt
 auch nochmal, dass bei Teildatensätzen von 100 Beobachtungen Aussagen nicht zwingend signifikant sind. Bei so kleinen Datenmengen, kann der Zufall oft "Scheinzusammenhänge"
 erzeugen, was man hier sehr gut sieht.
+
+
+#Stefan:
+Zu deinem ersten Punkt, Simon: Mit den Funktionen, die wir hatten, konnten wir die Daten meiner Meinung nach ganz gut analysieren. Da wir bei dem Analyseskript selber 
+mitgewirkt haben, konnten wir im Vorfeld die Funktionen so mitgestalten, dass sie für unsere Analyse bestens geeignet waren.
+Das einzige was ich kritisieren könnte wäre, dass es an der einen oder anderen Stelle etwas redundant war. Verschiedene Funktionen haben zum selben Ergebnis geführt.
+
+Und zu deinem zweiten Punkt: Das dachten wir uns genauso. Es war uns suspekt, dass Statistik Studierende ein deutlich höheres Interesse an Programmieren hatten 
+als Informatiker bzw. Data Scientists.
+
+
+
