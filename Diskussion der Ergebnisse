@@ -23,10 +23,23 @@
 
 
 ## Die tatsächlichen Abhängigkeiten mit denen simuliert wurde sind:
+-Alter normalverteilt mit N(25,2^2)
 
+-Studienfach: Die Wahl des Studienfachs sollte so gewählt werden, dass Statistik und Data Science eine gleiche Wahrscheinlichkeit haben,
+ gefolgt von Informatik und Mathe mit der kleinsten Wahrscheinlichkeit (siehe Ansonsten). Wenn sich die Interessen von Mathe und Programmieren 
+ jedoch stark unterscheiden, so haben wir die Wahl des Studienfachs von diesen abhängig gemacht.
 
+ Legende: prob("Statistik", "Data Science", "Mathe","Informatik"), Ip = Interesse am Programmieren & Im = Interesse an Mathe
 
+ Falls Im(0,4] und Ip(4,7] --> prob(15%,20%,5%,60%)
+ Falls Im(5,7] und Ip(4,7] --> prob(50%,20%,25%,5%)
+                 Ansonsten --> prob(35%,35%,5%,25%)
 
+-Interessen: Die Interessen an Mathematik und Programmieren sind beide gleichverteilt mit 1/7.
+
+-Mathe Lk: Je höher das Interesse an Mathematik, desto höher die Wahrscheinlichkeit, dass Mathe Lk gewählt wurde. Dabei haben wir drei Intervalle gesetzt:
+ Legende: prob(Ja,Nein)
+ (0,2] -> prob(20%,80%)   (2,6) -> prob(50%,50%)   [6,7] -> prob(80%,20%)
 
 
 ## Dialog:
