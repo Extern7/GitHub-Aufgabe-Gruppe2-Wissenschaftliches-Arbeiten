@@ -67,6 +67,7 @@ dquan(data$Interesse.an.Mathematik)
 #Nur ca. 1/3 der Studierenden haben ein hohes Interesse an Mathematik, obwohl es sich grundsätzlich um Studiengänge mit einem
 #hohen Mathematikanteil handelt.
 
+
 ##Interesse an Programmieren
 
 dquan(data$Interesse.an.Programmieren)
@@ -93,14 +94,13 @@ kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Progra
 ##Studienfach ~ Interesse an Mathematik
 
 kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
-#Kein Zusammenhang zwischen Studienfach ~ Interesse an Mathematik
 dkat_bar(data$Studienfach, data$Interesse.an.Mathematik)
 #Wenig Informatik Studierende haben ein hohes Interesse an Mathematik. (Hohes Interesse: >5)
+
 
 ##Studienfach ~ Interesse an Programmieren
 
 kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
-#Kein Zusammenhang zwischen Studienfach ~ Interesse an Programmieren
 dkat_bar(data$Studienfach, data$Interesse.an.Mathematik)
 #Wenig Informatik Studierende haben ein niedriges Interesse an Programmieren. (Niedriges Interesse: <4)
 
