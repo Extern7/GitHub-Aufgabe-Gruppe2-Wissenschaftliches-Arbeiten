@@ -70,3 +70,11 @@ die Zusammehänge zwischen dem Studienfach und den Interessen zu erkennen. Ich d
 Zusammenhänge zu erkennen.
 
 
+
+# Simon:
+Was mich noch interessieren würde: Gab es irgendwelche Funktionen, die euch kaum oder gar nicht geholfen haben? Würdet ihr wenn man das ganze nochmal macht noch andere
+Funktionen schreiben. (bzw fehlten euch irgendwelche Funktionen um die Analyse noch effektiver zu machen?)
+
+Was auch interessant ist: Ihr habt geschrieben, dass viele Statistik Studenten ein hohes Interesse an Programmieren haben. Dabei haben wir das gar nicht eingeplant. Das zeigt
+auch nochmal, dass bei Teildatensätzen von 100 Beobachtungen Aussagen nicht zwingend signifikant sind. Bei so kleinen Datenmengen, kann der Zufall oft "Scheinzusammenhänge"
+erzeugen, was man hier sehr gut sieht.
