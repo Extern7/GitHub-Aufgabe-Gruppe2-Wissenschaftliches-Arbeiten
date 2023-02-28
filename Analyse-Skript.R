@@ -1,6 +1,7 @@
 ### Analyse des Datensatz (ohne rownames)
 data <- read.csv("original_datensatz_ohne_rownames.csv")
 
+
 ##Analyse des Alters 
 
 dmetrische(data$Alter)
@@ -9,12 +10,14 @@ dmetrische(data$Alter)
 sd(data$Alter)
 #Mit einer Standardabweichung von ungefaehr 2.0 .
 
+
 ##Studienfach
 
 dkat(data$Studienfach)
 #Data Science und Statistik scheinen gleichverteilt zu sein mit Anteilen von jeweils ca. 35%.
 #Informatik hat einen kleineren Anteil mit ca. 20%. 
 #Mathe hat den kleinsten Anteil mit ca. 5%-10%
+
 
 ##Studienfach ~ Interesse an Mathematik
 
@@ -31,6 +34,7 @@ int.biv(data$Interesse.an.Mathematik, 5)
 #Bei den Informatikern sind es nur 14 Prozent, die großes Interesse an Mathe haben.
 #Informatiker scheinen also nicht so ein großes Interesse an Mathe zu haben.
 
+
 ##Studienfach ~ Interesse an Programmieren
 
 dkat_biv(data$Studienfach, data$Interesse.an.Programmieren)
@@ -46,10 +50,16 @@ int.biv(data$Interesse.an.Programmieren, 5)
 #Von den Mathe Studierenden haben 40 Prozent ein großes Interesse an Programmieren, allerdings ist das 
 #wenig aussagekraeftig, da die Daten wenig Mathe Studierende umfassen.
 
+
 ##Alter ~ Mathe LK
 
 dbiv(data$Alter, data$Mathe.LK) 
 #Es gibt keine Person unter 21, welche kein Mathe-LK hatte
+sum(data$Mathe.LK == "Ja")
+sum(data$Mathe.LK == "Nein")
+#Es gibt generell mehr Studierende, die Mathe LK hatten. 
+#Allerdings gibt es dabei keinen Zusammenhang zum Alter.
+
 
 ##Interesse an Mathematik
 
@@ -57,10 +67,17 @@ dquan(data$Interesse.an.Mathematik)
 #Nur ca. 1/3 der Studierenden haben ein hohes Interesse an Mathematik, obwohl es sich grundsätzlich um Studiengänge mit einem
 #hohen Mathematikanteil handelt.
 
-##Interesse an Mathematik ~ Mathe-LK ~ Alter
+##Interesse an Programmieren
+
+dquan(data$Interesse.an.Programmieren)
+#Nur ca. 1/5 der Studierenden haben ein hohes Interesse an Programmieren, obwohl es sich grundsätzlich um Studiengänge mit einem
+#mittleren bis hohen Anteil an Programmieren handelt.
+
+
+##Interesse an Mathematik ~ Mathe-LK
 
 kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
-#Im ersten Boxplot lässt sich erkennen, dass Personen mit Mathe-LK auch ein deutlich
+#Im ersten Balkendiagramm lässt sich erkennen, dass Personen mit Mathe-LK auch ein deutlich
 #höheres Interesse an Mathematik haben.
 #Das wird auch durch die genauen Lagemaßen bestätigt:
 summary(data$Interesse.an.Mathematik [which(data$Mathe.LK == "Ja")])
@@ -75,17 +92,17 @@ kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Progra
 
 ##Studienfach ~ Interesse an Mathematik
 
+kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
+#Kein Zusammenhang zwischen Studienfach ~ Interesse an Mathematik
 dkat_bar(data$Studienfach, data$Interesse.an.Mathematik)
-
+#Wenig Informatik Studierende haben ein hohes Interesse an Mathematik. (Hohes Interesse: >5)
 
 ##Studienfach ~ Interesse an Programmieren
 
-dkat_bar(data$Studienfach, data$Interesse.an.Programmieren)
-
-
-##Interesse an Programmieren
-
-dquan(data$Interesse.an.Programmieren)
+kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
+#Kein Zusammenhang zwischen Studienfach ~ Interesse an Programmieren
+dkat_bar(data$Studienfach, data$Interesse.an.Mathematik)
+#Wenig Informatik Studierende haben ein niedriges Interesse an Programmieren. (Niedriges Interesse: <4)
 
 
 #Verteilung der Interessen untersuchen
