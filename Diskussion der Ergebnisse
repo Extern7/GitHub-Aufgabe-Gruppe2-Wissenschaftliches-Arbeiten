@@ -2,11 +2,18 @@
 ###############################################################
 
 ## Die Analyse ergab folgendes:
--Alter ca. normaloverteilt mit N(25,2^2)
+-Alter ca. normalverteilt mit N(25,2^2)
+
 -Studienfach: Anteil von Data Science & Statistik mit jeweils ca. 37%, Informatik ca. 21% und Mathematik mit ca. 5%
--Bei den Mathematikstudierenden ist das Interesse an Mathematik unrealistisch/kein Zusammenhang, das liegt jedoch wahrscheinlich an den wenigen Daten
+
+-Bei den Mathematik Studierenden ist das Interesse an Mathematik unrealistisch (kein Zusammenhang), das liegt jedoch wahrscheinlich an den wenigen Daten
  der Mathematikstudierenden
--
+-Es gibt wenige Informatiker, die ein hohes Interesse (>5) an Mathematik haben
+-Viele Statistik Studierende haben ein niedriges Interesse (<2) an Mathematik
+
+-Ein Großteil der Informatik Studierenden hat ein Interesse an Programmieren (>3) bzw. es gibt wenige, die ein niedriges Interesse haben
+-Es gibt viele Statistik Studierende die ein großes Interesse (>5) an Programmieren haben
+
 
 
 
