@@ -14,9 +14,9 @@ sd(data$Alter)
 ##Studienfach
 
 dkat(data$Studienfach)
-#Data Science und Statistik scheinen gleichverteilt zu sein mit Anteilen von jeweils ca. 35%.
-#Informatik hat einen kleineren Anteil mit ca. 20%. 
-#Mathe hat den kleinsten Anteil mit ca. 5%-10%
+#Data Science und Statistik scheinen gleichverteilt zu sein mit Anteilen von jeweils ca. 37%.
+#Informatik hat einen kleineren Anteil mit ca. 21%. 
+#Mathe hat den kleinsten Anteil mit ca. 5%
 
 
 ##Studienfach ~ Interesse an Mathematik
