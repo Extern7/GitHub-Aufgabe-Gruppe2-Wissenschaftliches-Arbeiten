@@ -22,7 +22,6 @@ dkat(data$Studienfach)
 ##Studienfach ~ Interesse an Mathematik
 
 dkat_biv(data$Studienfach, data$Interesse.an.Mathematik)
-#Data Science und Statistik Studierende haben ein aehnlich verteiltes Interesse an Mathematik. (gleichverteilt)
 #Bei den Mathe Studierenden ist die Verteilung eher unrealistisch, da die meisten Mathe Studierenden 
 #nur "2" bei Interesse an Mathematik angegeben haben.
 
@@ -96,6 +95,12 @@ kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Progra
 kat_vis(data$Interesse.an.Mathematik, data$Studienfach, data$Interesse.an.Programmieren)
 dkat_bar(data$Studienfach, data$Interesse.an.Mathematik)
 #Wenig Informatik Studierende haben ein hohes Interesse an Mathematik. (Hohes Interesse: >5)
+#Es scheint, dass viele Statistik Studierende ein niedriges Interesse an Mathe haben. (Niedriges Interesse: <3)
+#Das bestätigt der folgende Befehl:
+1 - int.biv(data$Interesse.an.Mathematik, 2)
+# Ca. 38 Prozent der Statistiker haben "1" bzw. "2" gewählt.
+# Zum Vergleich haben nur 24 Prozent der Data Science Studierenden "1" bzw. "2" gewählt.
+
 #Es gibt zu wenig Mathematikstudierende in unserem Datensatz, um zwischen dem Studienfach Mathe und der Interesse an Mathematik
 #einen Zusammenhang herzustellen.
 
